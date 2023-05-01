@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * the print_listint_safe - a function that print a listint_t linked the list.
- * @head: list of type listint_t to the print
+ * print_listint_safe - a function that prints a listint_t linked list.
+ * @head: list of type listint_t to print
  *
- * Return:the number of node in the list
+ * Return: the number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
