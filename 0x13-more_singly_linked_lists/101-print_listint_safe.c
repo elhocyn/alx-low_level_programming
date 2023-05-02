@@ -1,52 +1,32 @@
-#include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
 
 /**
- * the print_listint_safe - prints a linked list safely
- * @head: the pointer to head of list
+ * print_listint_safe - prints a singly linked list of integers
+ * @head: pointer to head node of the list
  *
- * Return: numbers of nodes in the list
+ * Return: the numbers of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-    const listint_t *slow = head, *fast = head;
-    size_t count = 0;
+    size_t (num) = 0;
+    const listint_t *current, *prev;
 
-    while (slow && fast && fast->next)
-    {
-        printf("[%p] %d\n", (void *)slow, slow->n);
-        slow = slow->next;
-        fast = fast->next->next;
-
-        if (slow == fast)
-        {
-            count++;
-            while (slow != fast->next)
-            {
-                printf("[%p] %d\n", (void *)slow, slow->n);
-                slow = slow->next;
-                count++;
-            }
-            printf("-> [%p] %d\n", (void *)slow, slow->n);
-            count++;
-            break;
-        }
-        count++;
-    }
-
-    while (slow)
-    {
-        printf("[%p] %d\n", (void *)slow, slow->n);
-        slow = slow->next;
-        count++;
-    }
-
-    if (count == 0)
-    {
-        fprintf(stderr, "Error: list is empty\n");
+    if (head == NULL)
         exit(98);
+
+    current = head;
+    prev = NULL;
+    while (current != NULL)
+    {
+        printf("[%p] %d\n", (void *)current, current->n);
+        count++;
+        if (current < prev)
+            break;
+        prev = current;
+        current = current->next;
     }
 
-    return count;
+    return (num);
 }
