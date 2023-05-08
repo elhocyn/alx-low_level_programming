@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * __exit - prints error messages and exits with exit the value
+ * __exit - prints error messages and exits with exit value
  * @error: num is either exit value or file descriptor
- * @s: str is a name, either of a two filenames
+ * @s: str is a name, either of the two filenames
  * @fd: file descriptor
  * Return: 0 on success
  **/
@@ -29,9 +29,9 @@ int __exit(int error, char *s, int fd)
 }
 
 /**
- * main - a program that copies contents of the file to another file.
- * @argc: should be 3 (./a.out copyfromfile copytofiles)
- * @argv: first is file to copy from (fd_1), second is the files to copy to (fd_2)
+ * main - a program that copies the content of a file to another file.
+ * @argc: shoulds be 3 (./a.out copyfromfile copytofile)
+ * @argv: first is file to copy from (fd_1), second is file to copy to (fd_2)
  * Return: 0 (success), 97-100 (exit value errors)
  */
 int main(int argc, char *argv[])
