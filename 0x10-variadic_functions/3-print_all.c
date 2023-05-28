@@ -50,7 +50,7 @@ void print_string(va_list valist)
 /**
  * print_all - a function that prints anything : print varying input
  * of ints, chars, floats, and strings
- * @format: an array of chars signifying which data type to print
+ * @format: an array of the chars signifying which data type to print
  */
 void print_all(const char * const format, ...)
 {
